@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
+:root {
+    --yellow: #c09b06;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +12,46 @@
 body {
     background-color: rgba(236, 232, 232, 0.677);
     font-family: 'Roboto', sans-serif;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
 h1 {
-    background-color: rgba(255, 255, 255, 0.377);
+    background-color: rgba(74, 55, 55, 0.26);
     padding: 20px 40px;
     font-size: 4rem;
-    color: #504d42;
+    color: #cfccc2;
+}
+
+.component {
+    color: white;
+    padding-left: 26px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background-color: rgba(57, 56, 54, 0.746);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.source-code-button {
+    margin-top: 100px;
+    text-align: center;
+    width: 250px;
+    padding: 10px 12px;
+    border: white solid 2px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.35s;
+}
+
+.source-code-button:hover {
+    color: var(--yellow);
+    border: solid 2px var(--yellow);
+    transform: scale(1.08);
 }
 
 .background-video {
@@ -34,15 +68,15 @@ h1 {
 .menu a {
     display: block;
     font-size: 1.8rem;
-    padding: 1rem 1.5rem;
-    color: #FFACAC;
+    padding: 1rem 3rem;
+    color: rgba(213, 183, 10, 0.99);
     transition: all 0.35s linear;
     text-decoration: none;
     cursor: pointer;
 }
 
 .menu a:hover {
-    background-color: rgb(151, 42, 102);
+    background-color: var(--yellow);
     padding-left: 1.7rem;
     color: white;
     text-decoration: none;
@@ -52,11 +86,12 @@ h1 {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(31, 29, 29, 0.658);
+    background-color: rgba(255, 255, 255, 0.112);
     height: 100%;
     width: 100%;
     transition: all 0.3s ease-in-out;
     transform: translateX(-100%);
+    z-index: 5;
 }
 
 .show-sidebar {
@@ -67,14 +102,14 @@ h1 {
     position: fixed;
     top: 2rem;
     right: 3rem;
-    color: #FFBFA9;
-    font-size: 1.5rem;
+    color: var(--yellow);
+    font-size: 1.9rem;
     cursor: pointer;
     transition: all 0.35s linear;
 }
 
 .fa-bars:hover {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .fa-times {
@@ -85,7 +120,7 @@ h1 {
 }
 
 .fa-times:hover {
-    color: #FFACAC;
+    color: var(--yellow);
 }
 
 .sidebar-header {
@@ -93,10 +128,21 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 80px;
 }
 
 .logo {
-    margin-left: -15px;
+    color: white;
+    text-decoration: none;
+    font-size: 4rem;
+    transition: all 0.35s;
+}
+
+.logo:hover {
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 4rem;
 }
 
 @media (min-width: 676px) {
