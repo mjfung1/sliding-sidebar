@@ -22,7 +22,7 @@ body {
 h1 {
     background-color: rgba(74, 55, 55, 0.26);
     padding: 20px 40px;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #cfccc2;
 }
 
@@ -86,7 +86,7 @@ h1 {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.112);
+    background-color: rgba(36, 35, 35, 0.899);
     height: 100%;
     width: 100%;
     transition: all 0.3s ease-in-out;
@@ -95,7 +95,7 @@ h1 {
 }
 
 .show-sidebar {
-    transform: translate(0);
+    transform: translate(0px);
 }
 
 .fa-bars {
@@ -147,9 +147,16 @@ h1 {
 
 @media (min-width: 676px) {
     .sidebar {
-        width: 500px;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.112);
+    }
+
+    h1 {
+        font-size: 4rem;
     }
 }
+
+
 
 .disabled {
     pointer-events: none;
